@@ -1,3 +1,5 @@
+import { eliminarProducto, marcarProductos } from "./funcionesProductos.js";
+
 function item(contenido) {
     let div = document.createElement('div');
     div.className = "divProducto";
@@ -27,6 +29,9 @@ function item(contenido) {
     eliminar.className = "eliminarDiv"
     eliminar.innerText = "Eliminar"
     div2.appendChild(eliminar)
+
+    marcarProductos(div)
+    eliminarProducto(div)
 
     return div;
 }
